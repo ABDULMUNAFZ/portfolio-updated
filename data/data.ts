@@ -1,0 +1,16 @@
+export const links = {
+  home: "/",
+  freelance: "/freelance",
+  achievements: "/achievements",
+  certifications: "/certifications",
+  contact: "/contact",
+  email: "mailto:z.abdulmunaf@gmail.com",
+  github: "https://github.com/ABDULMUNAFZ",
+  linkedin: "https://www.linkedin.com/in/abdul-munaf-z-6380a8251",
+  website: "https://abdulmunaf.netlify.app/",
+  phone: "tel:+919894019190",
+  buymeacoffee: "https://buymeacoffee.com/abdulmunafz",
+  sourceCode: "https://github.com/ABDULMUNAFZ/Portfolio-main",
+  twitter: "https://twitter.com/ABDULMUNAFZ",
+  telegram: "https://t.me/ABDULMUNAFZ",
+};

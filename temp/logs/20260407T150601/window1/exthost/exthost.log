@@ -1,0 +1,208 @@
+2026-04-07 15:06:04.886 [info] Extension host with pid 27156 started
+2026-04-07 15:06:06.198 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-04-07 15:06:06.279 [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv, startup: false, activationEvent: 'onLanguage:plaintext'
+2026-04-07 15:06:06.286 [info] ExtensionService#_doActivateExtension mongodb.mongodb-vscode, startup: false, activationEvent: 'onLanguage:plaintext'
+2026-04-07 15:06:07.406 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-04-07 15:06:07.435 [info] ExtensionService#_doActivateExtension GitHub.copilot-chat, startup: false, activationEvent: 'onChatParticipant:github.copilot.editsAgent'
+2026-04-07 15:06:08.505 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-04-07 15:06:08.512 [info] ExtensionService#_doActivateExtension AllenLawrence.auto-mongodb, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.027 [info] ExtensionService#_doActivateExtension andyyaldoo.vscode-json, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.035 [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.057 [info] ExtensionService#_doActivateExtension ckolkman.vscode-postgres, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.255 [info] ExtensionService#_doActivateExtension Dadroit.dadroit-json-generator, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.258 [info] ExtensionService#_doActivateExtension ellreka.tailwindcss-highlight, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.265 [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.286 [info] ExtensionService#_doActivateExtension genuitecllc.codetogether, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.778 [info] ExtensionService#_doActivateExtension ms-vscode.test-adapter-converter, startup: true, activationEvent: '*', root cause: hbenl.vscode-test-explorer
+2026-04-07 15:06:09.783 [info] ExtensionService#_doActivateExtension mtxr.sqltools, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.820 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.822 [info] ExtensionService#_doActivateExtension sidharthachatterjee.vscode-tailwindcss, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.836 [info] ExtensionService#_doActivateExtension starkwang.markdown, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.859 [info] ExtensionService#_doActivateExtension tombonnike.vscode-status-bar-format-toggle, startup: true, activationEvent: '*'
+2026-04-07 15:06:09.866 [info] ExtensionService#_doActivateExtension xiaoluoboding.vscode-folder-size, startup: true, activationEvent: '*'
+2026-04-07 15:06:10.202 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2026-04-07 15:06:10.261 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-04-07 15:06:10.341 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-04-07 15:06:10.348 [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer, startup: true, activationEvent: '*'
+2026-04-07 15:06:10.379 [info] ExtensionService#_doActivateExtension mtxr.sqltools-driver-pg, startup: true, activationEvent: '*'
+2026-04-07 15:06:12.463 [error] Error: GitHubLoginFailed
+    at Qne._authShowWarnings (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:1686:18465)
+    at Qne.getCopilotToken (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:1686:16183)
+    at sfe.getCopilotToken (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:1364:7787)
+    at Bue.updateCachedToken (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:2842:8797)
+2026-04-07 15:06:12.464 [error] Error: GitHubLoginFailed
+    at Qne._authShowWarnings (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:1686:18465)
+    at Qne.getCopilotToken (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:1686:16183)
+    at sfe.getCopilotToken (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:1364:7787)
+    at iS._fetchModels (c:\Users\zabdu\.vscode\extensions\github.copilot-chat-0.42.3\dist\extension.js:6669:4401)
+2026-04-07 15:06:12.746 [error] Error: undefined
+
+Use debug option for more info: new MongoMemoryServer({ debug: true })
+    at c:\Users\zabdu\.vscode\extensions\allenlawrence.auto-mongodb-0.1.0\out\lib\mongodb-memory-server\lib\MongoMemoryServer.js:127:51
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-04-07 15:06:13.105 [info] Eager extensions activated
+2026-04-07 15:06:13.122 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.125 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.145 [info] ExtensionService#_doActivateExtension 10nates.ollama-autocoder, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.192 [info] ExtensionService#_doActivateExtension aaron-bond.better-comments, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.201 [info] ExtensionService#_doActivateExtension alefragnani.Bookmarks, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.208 [info] ExtensionService#_doActivateExtension alefragnani.project-manager, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.221 [info] ExtensionService#_doActivateExtension Andreh.jdk-setter, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.223 [info] ExtensionService#_doActivateExtension Anthropic.claude-code, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.364 [info] ExtensionService#_doActivateExtension bierner.emojisense, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.372 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.420 [info] ExtensionService#_doActivateExtension coderfin.logical-properties, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.473 [info] ExtensionService#_doActivateExtension codespaces-contrib.codeswing, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:13.876 [info] ExtensionService#_doActivateExtension cweijan.vscode-database-client2, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:14.305 [info] ExtensionService#_doActivateExtension cweijan.vscode-postgresql-client2, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:14.758 [info] ExtensionService#_doActivateExtension dartyushin.ollama-participant, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:14.764 [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:14.795 [info] ExtensionService#_doActivateExtension dsznajder.es7-react-js-snippets, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.222 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.314 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.314 [info] ExtensionService#_doActivateExtension flyfly6.terminal-in-status-bar, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.316 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.346 [info] ExtensionService#_doActivateExtension JorinEggers.js-prompt-alert, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.361 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onStartupFinished', root cause: littlefoxteam.vscode-python-test-adapter
+2026-04-07 15:06:15.471 [info] ExtensionService#_doActivateExtension ms-edgedevtools.vscode-edge-devtools, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.558 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.678 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-wsl, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.754 [info] ExtensionService#_doActivateExtension numso.vscode-tailwindcss-with-hex-colors, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.800 [info] ExtensionService#_doActivateExtension Pleiades.java-extension-pack-jdk, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.847 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.859 [info] ExtensionService#_doActivateExtension sarthikbhat.json-server, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.884 [info] ExtensionService#_doActivateExtension shardulm94.trailing-spaces, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.907 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.983 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:15.988 [info] ExtensionService#_doActivateExtension warm3snow.vscode-ollama, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:16.007 [info] ExtensionService#_doActivateExtension xiaoxian521.tailwindcss-highlight-intellisense, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:16.009 [info] ExtensionService#_doActivateExtension yandeu.five-server, startup: false, activationEvent: 'onStartupFinished'
+2026-04-07 15:06:16.308 [warning] DiagnosticCollection with name 'sql' does already exist.
+2026-04-07 15:06:16.367 [warning] DiagnosticCollection with name 'mongoCodeLens' does already exist.
+2026-04-07 15:06:16.368 [error] Activating extension cweijan.vscode-postgresql-client2 failed due to an error:
+2026-04-07 15:06:16.368 [error] Error: View provider for 'dbclinet.variable.config.view' already registered
+    at jk.registerWebviewViewProvider (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:629:115707)
+    at Object.registerWebviewViewProvider (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:629:149305)
+    at register (c:\Users\zabdu\.vscode\extensions\cweijan.vscode-postgresql-client2-8.4.5\out\extension.js:160166:22)
+    at r.init (c:\Users\zabdu\.vscode\extensions\cweijan.vscode-postgresql-client2-8.4.5\out\extension.js:188647:35)
+    at JLr (c:\Users\zabdu\.vscode\extensions\cweijan.vscode-postgresql-client2-8.4.5\out\extension.js:189755:10)
+    at Td._callActivateOptional (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:18588)
+    at Td._callActivate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:18298)
+    at file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:16272
+    at xb._activate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:15965)
+    at xb._waitForDepsThenActivate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:15907)
+    at xb._initialize (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:15274)
+2026-04-07 15:06:16.378 [info] Extension host terminating: received terminate message from renderer
+2026-04-07 15:06:16.410 [error] An error occurred when disposing the subscriptions for extension 'sidharthachatterjee.vscode-tailwindcss':
+2026-04-07 15:06:16.411 [error] TypeError: e.dispose is not a function
+    at Cn (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:401:736)
+    at FP._fn (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:18387)
+    at FP.dispose (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:401:1248)
+    at lP._deactivate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:14704)
+    at file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:12006
+    at Array.map (<anonymous>)
+    at lP._deactivateAll (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:11994)
+    at lP.terminate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:12345)
+    at r.terminate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:507:1072)
+    at Gs (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:11700)
+    at op.value (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:9847)
+    at E._deliver (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:403:3043)
+    at E.fire (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:403:3361)
+    at as.fire (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:405:8437)
+    at MessagePortMain.<anonymous> (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:8082)
+    at MessagePortMain.emit (node:events:519:28)
+    at MessagePortMain.emit (node:domain:489:12)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959)
+2026-04-07 15:06:16.419 [error] Unable to refresh tree view com.genuitec.codetogether.presence.treeview: Canceled
+2026-04-07 15:06:16.419 [error] Unable to refresh tree view mongoDBConnectionExplorer: Canceled
+2026-04-07 15:06:16.420 [error] ProxyResolver#resolveProxy DIRECT Canceled: Canceled
+    at Ys (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:383:1546)
+    at file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:150162
+    at Array.forEach (<anonymous>)
+    at r.dispose (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:150070)
+    at lP.terminate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:12324)
+    at r.terminate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:507:1072)
+    at Gs (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:11700)
+    at op.value (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:9847)
+    at E._deliver (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:403:3043)
+    at E.fire (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:403:3361)
+    at as.fire (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:405:8437)
+    at MessagePortMain.<anonymous> (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:8082)
+    at MessagePortMain.emit (node:events:519:28)
+    at MessagePortMain.emit (node:domain:489:12)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959) 
+2026-04-07 15:06:16.420 [error] ProxyResolver#resolveProxy DIRECT Canceled: Canceled
+    at Ys (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:383:1546)
+    at file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:150162
+    at Array.forEach (<anonymous>)
+    at r.dispose (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:150070)
+    at lP.terminate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:12324)
+    at r.terminate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:507:1072)
+    at Gs (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:11700)
+    at op.value (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:9847)
+    at E._deliver (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:403:3043)
+    at E.fire (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:403:3361)
+    at as.fire (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:405:8437)
+    at MessagePortMain.<anonymous> (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:821:8082)
+    at MessagePortMain.emit (node:events:519:28)
+    at MessagePortMain.emit (node:domain:489:12)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2959) 
+2026-04-07 15:06:16.466 [error] ProxyResolver#resolveProxy DIRECT Canceled: Canceled
+    at new zI (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:148505)
+    at r._remoteCall (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:154557)
+    at Proxy.i.<computed>.s.charCodeAt.i.<computed> (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:151352)
+    at ng.resolveProxy (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:498:79598)
+    at Object.resolveProxy (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:631:26898)
+    at useProxySettings (c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:208:16)
+    at c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:145:13
+    at c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:995:13 
+2026-04-07 15:06:16.514 [error] Activating extension alefragnani.Bookmarks failed due to an error:
+2026-04-07 15:06:16.514 [error] Canceled (FileSystemError): Canceled
+    at or._handleError (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:22145)
+    at Object.readFile (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:19753)
+    at s (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:79361)
+    at a.newBuilder (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:79481)
+    at o.WhatsNewManager.getWebviewContentLocal (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:78188)
+    at o.WhatsNewManager.showPage (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:76572)
+    at o.WhatsNewManager.showUpdate (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:77742)
+    at o.WhatsNewManager.showUpdateAndMarkShown (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:77604)
+    at o.WhatsNewManager.showUpdateInFocusedWindowOnly (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:77341)
+    at o.WhatsNewManager.showPageIfCurrentVersionIsGreaterThanPrevisouVersion (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:77181)
+    at o.WhatsNewManager.showPageInActivation (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:75996)
+    at o.registerWhatsNew (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:65976)
+    at e.activate (c:\Users\zabdu\.vscode\extensions\alefragnani.bookmarks-14.1.0\dist\extension-node.js:1:118627)
+    at xb._activate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:15965)
+    at xb._waitForDepsThenActivate (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:15907)
+    at xb._initialize (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:501:15274)
+2026-04-07 15:06:16.518 [error] Unable to refresh tree view projectsExplorerFavorites: Canceled
+2026-04-07 15:06:16.559 [error] ProxyResolver#resolveProxy DIRECT Canceled: Canceled
+    at new zI (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:148505)
+    at r._remoteCall (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:154557)
+    at Proxy.i.<computed>.s.charCodeAt.i.<computed> (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:407:151352)
+    at ng.resolveProxy (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:498:79598)
+    at Object.resolveProxy (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:631:26898)
+    at useProxySettings (c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:208:16)
+    at c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:231:13
+    at new Promise (<anonymous>)
+    at resolveProxyURL (c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:230:35)
+    at c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:550:53
+    at Generator.next (<anonymous>)
+    at c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:35:71
+    at new Promise (<anonymous>)
+    at __awaiter (c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:31:12)
+    at patchedFetch (c:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\e7fb5e96c0\resources\app\node_modules\@vscode\proxy-agent\out\index.js:535:16)
+    at globalThis.fetch (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:631:23844)
+    at FetchHTTPClient.U [as _fetch] (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:587503)
+    at FetchHTTPClient.makeRequest (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:588079)
+    at Publisher.send (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:567338)
+    at Publisher.flush (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:566106)
+    at Analytics.flush (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:589582)
+    at Analytics.closeAndFlush (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:589301)
+    at TelemetryService.deactivate (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:1638395)
+    at MDBExtensionController.deactivate (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:41:142053)
+    at runNextTicks (node:internal/process/task_queues:64:5)
+    at processImmediate (node:internal/timers:452:9)
+    at Object.t.deactivate (c:\Users\zabdu\.vscode\extensions\mongodb.mongodb-vscode-1.16.0\dist\extension.js:5:1633138)
+    at async Promise.all (index 28)
+    at lP._deactivateAll (file:///c:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:505:12029) 
+2026-04-07 15:06:16.560 [info] Extension host with pid 27156 exiting with code 0

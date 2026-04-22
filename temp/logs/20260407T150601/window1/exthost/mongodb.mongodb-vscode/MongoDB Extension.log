@@ -1,0 +1,51 @@
+2026-04-07 15:06:11.198 [info] [extension] Activating extension... [
+  {
+    id: 'mongodb.mongodb-vscode',
+    version: '1.16.0',
+    mode: 'Production',
+    kind: 'UI',
+    extensionPath: 'c:\\Users\\zabdu\\.vscode\\extensions\\mongodb.mongodb-vscode-1.16.0',
+    logPath: '/d:/portfolio-main/portfolio-main/temp/logs/20260407T150601/window1/exthost/mongodb.mongodb-vscode',
+    workspaceStoragePath: undefined,
+    globalStoragePath: '/D:/portfolio-main/portfolio-main/temp/User/globalStorage/mongodb.mongodb-vscode',
+    defaultConnectionSavingLocation: 'Global',
+    buildInfo: {
+      nodeVersion: 'v22.22.1',
+      runtimePlatform: 'win32',
+      runtimeArch: 'x64'
+    }
+  }
+]
+2026-04-07 15:06:11.199 [info] [language server controller] Creating MongoDB Language Server... [
+  {
+    extensionPath: 'c:\\Users\\zabdu\\.vscode\\extensions\\mongodb.mongodb-vscode-1.16.0',
+    languageServer: {
+      id: 'mongodbLanguageServer',
+      name: 'MongoDB Language Server',
+      path: 'c:\\Users\\zabdu\\.vscode\\extensions\\mongodb.mongodb-vscode-1.16.0\\dist\\languageServer.js',
+      documentSelector: '[{"pattern":"**/*.mongodb.js"},{"pattern":"**/*.mongodb"}]'
+    }
+  }
+]
+2026-04-07 15:06:11.279 [info] [participant] Chat participant created [ { participantId: 'mongodb.participant' } ]
+2026-04-07 15:06:11.279 [info] [language server controller] Starting the language server... 
+2026-04-07 15:06:11.279 [info] [webview controller] Opening webview... 
+2026-04-07 15:06:11.279 [info] [language server controller] MongoDBService initialized. Sending default settings... {"extensionPath":"c:\\Users\\zabdu\\.vscode\\extensions\\mongodb.mongodb-vscode-1.16.0","connectionId":null,"hasConnectionString":false,"hasConnectionOptions":false} 
+2026-04-07 15:06:11.279 [info] [telemetry] Segment analytics activated [
+  {
+    anonymousId: 'b81e1b3e-eac8-4e70-bf08-a0d219675aae',
+    traits: {
+      device_id: 'baec15996ebb9994fd29739ec504726a7276d70d468c4e781fbfea9e3f064f2f',
+      app_name: 'Visual Studio Code'
+    }
+  }
+]
+2026-04-07 15:06:16.418 [info] [extension] Deactivating extension... 
+2026-04-07 15:06:16.418 [info] [connection controller] Disconnect called, currently connected to [ null ]
+2026-04-07 15:06:16.418 [info] [language server controller] Changing MongoDBService active connection... [ { connectionId: null } ]
+2026-04-07 15:06:16.418 [error] [connection controller] Unable to disconnect: no active connection 
+2026-04-07 15:06:16.418 [info] [connection controller] Disconnect called, currently connected to [ null ]
+2026-04-07 15:06:16.418 [info] [language server controller] Changing MongoDBService active connection... [ { connectionId: null } ]
+2026-04-07 15:06:16.418 [error] [connection controller] Unable to disconnect: no active connection 
+2026-04-07 15:06:16.419 [info] [language server controller] Deactivating the language server... 
+2026-04-07 15:06:16.419 [info] [language server controller] Deactivating the language server... 

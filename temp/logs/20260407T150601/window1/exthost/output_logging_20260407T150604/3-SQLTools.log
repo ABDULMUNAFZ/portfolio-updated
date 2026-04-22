@@ -1,0 +1,84 @@
+[1775554570124] INFO  (ext): SQLTools is starting
+[1775554570126] INFO  (ext): initializing language client...
+[1775554570127] INFO  (ext): Registering client for languages [{"scheme":"sqltools"},{"language":"sql","scheme":"untitled"},{"language":"sql","scheme":"file"},{"language":"sql","scheme":"sqltools"}]
+    ns: "lc"
+[1775554570130] INFO  (ext): loading plugins...
+[1775554570131] INFO  (ext): registering Formatter Plugin.
+    plugin: {
+      "name": "Formatter Plugin"
+    }
+[1775554570131] INFO  (ext): registering Connection Manager Plugin.
+    plugin: {
+      "name": "Connection Manager Plugin"
+    }
+[1775554570131] INFO  (ext): registering CodeLens Plugin.
+    plugin: {
+      "name": "CodeLens Plugin",
+      "registeredLanguages": []
+    }
+[1775554570132] INFO  (ext): registering Dependency Manager Plugin.
+    plugin: {
+      "name": "Dependency Manager Plugin",
+      "installingDrivers": []
+    }
+[1775554570134] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1775554570135] INFO  (ext): registering History Manager Plugin.
+    plugin: {
+      "name": "History Manager Plugin"
+    }
+[1775554570135] INFO  (ext): registering Bookmarks Manager Plugin.
+    plugin: {
+      "name": "Bookmarks Manager Plugin"
+    }
+[1775554570136] INFO  (ext): registering Authentication Provider Plugin.
+    plugin: {
+      "name": "Authentication Provider Plugin",
+      "isRegistered": false
+    }
+[1775554570136] INFO  (ext): registering Object Drop-in Provider (plugin).
+    plugin: {
+      "type": "plugin",
+      "name": "Object Drop-in Provider",
+      "isRegistered": false
+    }
+[1775554570137] INFO  (ext): SQLTools activation completed. 12.5983 ms
+[1775554570156] INFO  (ext): Formatter Plugin registered!
+[1775554570156] INFO  (ext): CodeLens Plugin registered!
+[1775554570156] INFO  (ext): Dependency Manager Plugin registered!
+[1775554570157] INFO  (ext): Connection Manager Plugin registered!
+[1775554570157] INFO  (ext): History Manager Plugin registered!
+[1775554570157] INFO  (ext): Bookmarks Manager Plugin registered!
+[1775554570157] INFO  (ext): Authentication Provider Plugin registered!
+[1775554570157] INFO  (ext): Object Drop-in Provider (plugin) registered!
+[1775554570349] INFO  (ls): SQLTools Server started!
+===============================
+Using node runtime?: no
+ExecPath: C:\Users\zabdu\AppData\Local\Programs\Microsoft VS Code\Code.exe 
+===============================
+[1775554570394] INFO  (ext): LanguageClient ready
+    ns: "lc"
+[1775554570480] INFO  (ext): registering PostgreSQL/Cockroach Plugin (driver).
+    plugin: {
+      "extensionId": "mtxr.sqltools-driver-pg",
+      "name": "PostgreSQL/Cockroach Plugin",
+      "type": "driver"
+    }
+[1775554570391] INFO  (ls): Initialized with node version:v22.22.1
+[1775554570753] INFO  (ls): REQUEST RECEIVED => ls/RegisterPlugin
+[1775554570753] INFO  (ls): request to register plugin: "c:\Users\zabdu\.vscode\extensions\mtxr.sqltools-driver-pg-0.5.7\out\ls\plugin.js"
+[1775554570842] INFO  (ls): Driver postgresql registered!
+    place: "driver-map"
+    ns: "ls-context"
+[1775554570842] INFO  (ls): Driver aws redshift registered!
+    place: "driver-map"
+    ns: "ls-context"
+[1775554570842] INFO  (ls): Driver cockroachdb registered!
+    place: "driver-map"
+    ns: "ls-context"
+[1775554570843] INFO  (ext): PostgreSQL/Cockroach Plugin (driver) registered!
+[1775554572462] INFO  (ext): EXECUTING COMMAND => sqltools.refreshTree
+[1775554572462] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"
+[1775554572487] INFO  (ext): Connection explorer changed. Will be updated.
+    ns: "conn-man:explorer"

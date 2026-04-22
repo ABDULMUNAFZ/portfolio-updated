@@ -1,0 +1,4 @@
+2026-04-07 15:06:01.941 [error] Error: Error mutex already exists
+    at hs.installMutex (file:///C:/Users/zabdu/AppData/Local/Programs/Microsoft%20VS%20Code/e7fb5e96c0/resources/app/out/main.js:591:24942)
+2026-04-07 15:06:02.736 [info] update#setState idle
+2026-04-07 15:06:16.561 [info] Extension host with pid 27156 exited with code: 0, signal: unknown.

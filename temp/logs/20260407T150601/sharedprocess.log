@@ -1,0 +1,37 @@
+2026-04-07 15:06:04.036 [info] danielsanmedium.dscodegpt 3.17.6 Running post uninstall script
+2026-04-07 15:06:04.036 [info] sourcegraph.cody-ai 1.149.0 Running post uninstall script
+2026-04-07 15:06:04.162 [info] danielsanmedium.dscodegpt 3.17.6 post-uninstall [CodeGPT] Cleanup complete: removed C:\Users\zabdu\.codegpt
+
+2026-04-07 15:06:04.181 [info] Finished running post uninstall script danielsanmedium.dscodegpt 3.17.6
+2026-04-07 15:06:04.229 [error] sourcegraph.cody-ai 1.149.0 post-uninstall (node:27016) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Code --trace-deprecation ...` to show where the warning was created)
+
+2026-04-07 15:06:04.650 [info] Marked extension as removed catppuccin.catppuccin-vsc-3.18.1
+2026-04-07 15:06:04.695 [info] Marked extension as removed danielsanmedium.dscodegpt-3.17.6
+2026-04-07 15:06:04.696 [info] Marked extension as removed enkia.tokyo-night-1.1.2
+2026-04-07 15:06:04.697 [info] Marked extension as removed ikenshu.rose-noctis-0.1.2
+2026-04-07 15:06:04.697 [info] Marked extension as removed ivenomweed.venomtyme-1.0.3
+2026-04-07 15:06:04.697 [info] Marked extension as removed klyap.vscode-stardew-icon-theme-0.0.7
+2026-04-07 15:06:04.697 [info] Marked extension as removed lakshits11.best-themes-redefined-0.4.6
+2026-04-07 15:06:04.697 [info] Marked extension as removed ms-vscode.cpptools-themes-2.0.0
+2026-04-07 15:06:04.697 [info] Marked extension as removed pkief.material-icon-theme-5.33.1
+2026-04-07 15:06:04.697 [info] Marked extension as removed sourcegraph.cody-ai-1.149.0
+2026-04-07 15:06:04.698 [info] Marked extension as removed thomaz.preparing-1.7.0
+2026-04-07 15:06:04.896 [error] sourcegraph.cody-ai 1.149.0 post-uninstall GraphQLTelemetryExporter: Error exporting telemetry events: Error: accessing Sourcegraph HTTP API:  Error: HTTP status code 401: Invalid access token.
+ (https://sourcegraph.com/.api/graphql?RecordTelemetryEvents)
+    at c:\Users\zabdu\.vscode\extensions\sourcegraph.cody-ai-1.149.0\dist\post-uninstall.js:14987:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async _SourcegraphGraphQLAPIClient.recordTelemetryEvents (c:\Users\zabdu\.vscode\extensions\sourcegraph.cody-ai-1.149.0\dist\post-uninstall.js:14774:29)
+    at async GraphQLTelemetryExporter.exportEvents (c:\Users\zabdu\.vscode\extensions\sourcegraph.cody-ai-1.149.0\dist\post-uninstall.js:15052:27)
+
+2026-04-07 15:06:05.143 [info] Finished running post uninstall script sourcegraph.cody-ai 1.149.0
+2026-04-07 15:06:05.246 [info] Deleted marked for removal extension from disk catppuccin.catppuccin-vsc c:\Users\zabdu\.vscode\extensions\catppuccin.catppuccin-vsc-3.18.1
+2026-04-07 15:06:05.246 [info] Deleted marked for removal extension from disk ikenshu.rose-noctis c:\Users\zabdu\.vscode\extensions\ikenshu.rose-noctis-0.1.2
+2026-04-07 15:06:05.246 [info] Deleted marked for removal extension from disk enkia.tokyo-night c:\Users\zabdu\.vscode\extensions\enkia.tokyo-night-1.1.2
+2026-04-07 15:06:05.250 [info] Deleted marked for removal extension from disk ms-vscode.cpptools-themes c:\Users\zabdu\.vscode\extensions\ms-vscode.cpptools-themes-2.0.0
+2026-04-07 15:06:05.253 [info] Deleted marked for removal extension from disk ivenomweed.venomtyme c:\Users\zabdu\.vscode\extensions\ivenomweed.venomtyme-1.0.3
+2026-04-07 15:06:05.255 [info] Deleted marked for removal extension from disk klyap.vscode-stardew-icon-theme c:\Users\zabdu\.vscode\extensions\klyap.vscode-stardew-icon-theme-0.0.7
+2026-04-07 15:06:05.258 [info] Deleted marked for removal extension from disk thomaz.preparing c:\Users\zabdu\.vscode\extensions\thomaz.preparing-1.7.0
+2026-04-07 15:06:05.265 [info] Deleted marked for removal extension from disk lakshits11.best-themes-redefined c:\Users\zabdu\.vscode\extensions\lakshits11.best-themes-redefined-0.4.6
+2026-04-07 15:06:05.268 [info] Deleted marked for removal extension from disk sourcegraph.cody-ai c:\Users\zabdu\.vscode\extensions\sourcegraph.cody-ai-1.149.0
+2026-04-07 15:06:05.789 [info] Deleted marked for removal extension from disk danielsanmedium.dscodegpt c:\Users\zabdu\.vscode\extensions\danielsanmedium.dscodegpt-3.17.6
