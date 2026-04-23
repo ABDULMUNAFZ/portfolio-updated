@@ -184,7 +184,7 @@ function createCardGeo(cardShape: THREE.Shape) {
 
 /**
  * Renders a textured card face with corrected UV mapping.
- * Attaches geometry directly to avoid first-frame blank render.
+ * Uses meshBasicMaterial so the image renders exactly as-is with no lighting overlay.
  */
 function CardFace({
   geometry,
@@ -197,17 +197,25 @@ function CardFace({
   position: [number, number, number];
   rotation?: [number, number, number];
 }) {
-  // Clone once so each face has its own geometry instance
   const geo = useMemo(() => geometry.clone(), [geometry]);
+  const matRef = useRef<THREE.MeshBasicMaterial>(null);
+
+  // When texture changes (null → loaded), force shader recompile
+  useEffect(() => {
+    if (matRef.current) {
+      matRef.current.map = texture;
+      matRef.current.needsUpdate = true;
+    }
+  }, [texture]);
 
   return (
     <mesh position={position} rotation={rotation} geometry={geo}>
-      <meshStandardMaterial
+      <meshBasicMaterial
+        ref={matRef}
         map={texture || undefined}
-        metalness={0.12}
-        roughness={0.62}
         side={THREE.FrontSide}
-        toneMapped={true}
+        toneMapped={false}
+        needsUpdate={!!texture}
       />
     </mesh>
   );

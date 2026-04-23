@@ -241,14 +241,23 @@ input:-webkit-autofill:active {
   outline: initial !important;
 }
 
-.section.section__2,
-.section.section__2 .fp-overflow {
-  overflow: visible !important;
+@media (min-width: 1024px) {
+  .section.section__2,
+  .section.section__2 .fp-overflow {
+    overflow: visible !important;
+  }
+
+  .section.section__2 .fp-overflow {
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+  }
 }
 
-.section.section__2 .fp-overflow {
-  justify-content: flex-start !important;
-  align-items: stretch !important;
+@media (max-width: 1023px) {
+  .section.section__2 .fp-overflow {
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }
 
 .fp-watermark {

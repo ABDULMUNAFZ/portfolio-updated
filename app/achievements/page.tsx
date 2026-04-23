@@ -1,57 +1,180 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import "../achievements.css";
 import "../header.css";
+import FullpageProviderWork from "@/components/fullpageProviderWork";
 import { Cursor } from "@/components/cursor";
 import { HeaderNavigation } from "@/components/headerNavigation";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/contactSection/footer";
+import {
+  AchievementSection,
+  type AchievementData,
+} from "@/components/achievementsPage/achievementSection";
 
-const achievements = [
+const achievementsData: AchievementData[] = [
   {
-    title: "Mealzy - Innovative Food Web Solutions Hackathon",
-    prize: "🥇 First Prize",
+    // Light BG (color="Dark") — use blue #4767e8 as secondary accent
+    title: "Mealzy — Innovative Food Web Solutions",
+    titleJSX: (
+      <>
+        Mealzy —{" "}
+        <span style={{ color: "#5a33f9" }}>Innovative</span>{" "}
+        Food Web Solutions
+        <span style={{ color: "#4767e8" }}>.</span>
+      </>
+    ),
+    position: "1st Prize",
+    positionRank: 1,
+    eventType: "Hackathon",
     location: "AIC Raise, Coimbatore",
-    year: "2025",
-    type: "Hackathon",
-    color: "#5a33f9",
-    image: "", // User will provide
+    date: "March 2025",
+    description:
+      "Built Mealzy, an AI-powered food delivery platform that reimagines how people discover and order meals. Won first place among 50+ competing teams.",
+    descriptionJSX: (
+      <>
+        Built <span style={{ color: "#5a33f9", fontWeight: 700 }}>Mealzy</span>, an{" "}
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>AI-powered</span> food delivery
+        platform that reimagines how people discover and order meals. Won{" "}
+        <span style={{ fontWeight: 800 }}>first place</span> among 50+ competing teams.
+      </>
+    ),
+    images: [
+      "/img/achievements/ach11.png",
+      "/img/achievements/ach12.png",
+      "/img/achievements/ach13.png",
+    ],
   },
   {
-    title: "HACKSTRONAUTS - 24 Hr Challenge",
-    prize: "🥇 1st Place",
+    // Dark BG (color="Light") — use pink #f68ed4 as secondary accent
+    title: "HACKSTRONAUTS — 24 Hour Challenge",
+    titleJSX: (
+      <>
+        <span style={{ color: "#fcf2ff" }}>HACKSTRONAUTS</span> —{" "}
+        24 Hour <span style={{ color: "#5a33f9" }}>Challenge</span>
+        <span style={{ color: "#f68ed4" }}>.</span>
+      </>
+    ),
+    position: "1st Place",
+    positionRank: 1,
+    eventType: "24Hr Challenge",
     location: "SRM University, Chennai",
-    year: "2025",
-    type: "24Hr Challenge",
-    color: "#f68ed4",
-    image: "", // User will provide
+    date: "February 2025",
+    description:
+      "Conquered a grueling 24-hour hackathon at SRM University. Delivered a full-stack solution under extreme time pressure, securing the top position.",
+    descriptionJSX: (
+      <>
+        Conquered a grueling{" "}
+        <span style={{ color: "#f68ed4", fontWeight: 700 }}>24-hour hackathon</span> at{" "}
+        <span style={{ fontWeight: 700 }}>SRM University</span>. Delivered a{" "}
+        <span style={{ color: "#5a33f9", fontWeight: 700 }}>full-stack solution</span> under
+        extreme time pressure, securing the{" "}
+        <span style={{ fontWeight: 800 }}>top position</span>.
+      </>
+    ),
+    images: [
+      "/img/achievements/ach21.png",
+      "/img/achievements/ach22.png",
+      "/img/achievements/ach23.png",
+    ],
   },
   {
+    // Light BG — use blue
     title: "New India Vibrant Hackathon",
-    prize: "🥈 Second Prize",
-    location: "Surat Municipal Corporation",
-    year: "2023",
-    type: "Grand Finale",
-    color: "#5a33f9",
-    image: "", // User will provide
+    titleJSX: (
+      <>
+        New India{" "}
+        <span style={{ color: "#5a33f9" }}>Vibrant</span>{" "}
+        Hackathon
+        <span style={{ color: "#4767e8" }}>.</span>
+      </>
+    ),
+    position: "2nd Prize",
+    positionRank: 2,
+    eventType: "Grand Finale",
+    location: "Surat Municipal Corporation, Surat",
+    date: "December 2023",
+    description:
+      "Reached the grand finale of a national-level hackathon and secured second prize. Competed against top teams from across India.",
+    descriptionJSX: (
+      <>
+        Reached the{" "}
+        <span style={{ color: "#5a33f9", fontWeight: 700 }}>grand finale</span> of a{" "}
+        <span style={{ fontWeight: 700 }}>national-level</span> hackathon and secured{" "}
+        <span style={{ fontWeight: 800 }}>second prize</span>. Competed against{" "}
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>top teams from across India</span>.
+      </>
+    ),
+    images: [
+      "/img/achievements/ach31.png",
+      "/img/achievements/ach32.png",
+      "/img/achievements/ach33.png",
+    ],
   },
   {
+    // Dark BG — use pink
     title: "Bureau of Indian Standards",
-    prize: "🥉 Third Prize",
+    titleJSX: (
+      <>
+        Bureau of{" "}
+        <span style={{ color: "#fcf2ff" }}>Indian</span>{" "}
+        <span style={{ color: "#5a33f9" }}>Standards</span>
+        <span style={{ color: "#f68ed4" }}>.</span>
+      </>
+    ),
+    position: "3rd Prize",
+    positionRank: 3,
+    eventType: "Competition",
     location: "Sri Krishna College, Coimbatore",
-    year: "2026",
-    type: "Competition",
-    color: "#f68ed4",
-    image: "", // User will provide
+    date: "January 2026",
+    description:
+      "Recognized by the Bureau of Indian Standards for excellence in technical innovation. Placed third in a competitive field of participants.",
+    descriptionJSX: (
+      <>
+        Recognized by the{" "}
+        <span style={{ color: "#f68ed4", fontWeight: 700 }}>Bureau of Indian Standards</span> for
+        excellence in{" "}
+        <span style={{ color: "#5a33f9", fontWeight: 700 }}>technical innovation</span>. Placed{" "}
+        <span style={{ fontWeight: 800 }}>third</span> in a competitive field of participants.
+      </>
+    ),
+    images: [
+      "/img/achievements/ach41.png",
+      "/img/achievements/ach42.png",
+      "/img/achievements/ach43.png",
+    ],
   },
   {
-    title: "Bitathon - Top 8 Finalist",
-    prize: "🏆 Top 8 Finalist",
-    location: "Goa Institute of Management",
-    year: "2026",
-    type: "Analytics",
-    color: "#5a33f9",
-    image: "", // User will provide
+    // Light BG — use blue
+    title: "Bitathon 2026 — Top 8 Finalist",
+    titleJSX: (
+      <>
+        <span style={{ color: "#5a33f9" }}>Bitathon</span> 2026 —{" "}
+        Top 8 Finalist
+        <span style={{ color: "#4767e8" }}>.</span>
+      </>
+    ),
+    position: "Top 8 Finalist",
+    positionRank: 0,
+    eventType: "Analytics",
+    location: "Goa Institute of Management, Goa",
+    date: "February 2026",
+    description:
+      "Secured a Top 8 Finalist position at Bitathon 2026, hosted by Goa Institute of Management. Competing with highly talented teams from across India and advancing to the final round marked a significant milestone.",
+    descriptionJSX: (
+      <>
+        Secured a{" "}
+        <span style={{ fontWeight: 800 }}>Top 8 Finalist</span> position at{" "}
+        <span style={{ color: "#5a33f9", fontWeight: 700 }}>Bitathon 2026</span>, hosted by{" "}
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>Goa Institute of Management</span>. Competing with
+        highly talented teams from across{" "}
+        <span style={{ fontWeight: 700 }}>India</span> and advancing to the{" "}
+        <span style={{ fontWeight: 700 }}>final round</span> marked a significant milestone.
+      </>
+    ),
+    images: [
+      "/img/achievements/ach51.png",
+      "/img/achievements/ach52.png",
+      "/img/achievements/ach53.png",
+    ],
   },
 ];
 
@@ -59,107 +182,27 @@ export default function AchievementsPage() {
   return (
     <>
       <Cursor />
-      <Header color="Light" />
       <HeaderNavigation />
-      <main className="darkGradient relative flex min-h-screen w-full flex-col items-start px-paddingX py-paddingY text-[#def438]">
-        <h1 className="mb-2 mt-[0.5em] text-[12.2vw] font-bold leading-[0.9] tracking-tight md:text-[clamp(16px,_6.3vw_+_8px,_120px)]">
-          Achieve<span style={{ color: "#fcf2ff" }}>ments</span>
-          <span style={{ color: "#f68ed4" }}>.</span>
-        </h1>
-        <p className="mb-8 max-w-[600px] text-[clamp(14px,_1vw_+_8px,_20px)] text-[#def438aa] md:mb-12">
-          Hackathons won, challenges conquered, and recognition earned across India.
-        </p>
+      <FullpageProviderWork>
+        <div id="fullpage">
+          {/* Fixed background watermark */}
+          <div className="background ach-background">
+            ACHIEVE
+            <br />
+            MENTS
+          </div>
 
-        {/* Masonry-style image gallery layout */}
-        <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
-          {achievements.map((ach, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-3xl transition-all duration-500 hover:scale-[1.02]"
-              style={{
-                background: `rgba(222,244,56,0.03)`,
-                border: `1px solid ${ach.color}25`,
-              }}
-            >
-              {/* Image area - large, prominent */}
-              <div
-                className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden"
-                style={{
-                  background: `linear-gradient(135deg, ${ach.color}15 0%, ${ach.color}05 100%)`,
-                }}
-              >
-                {ach.image ? (
-                  <Image
-                    src={ach.image}
-                    alt={ach.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex flex-col items-center gap-2 text-center">
-                    <span className="text-5xl opacity-40">🏆</span>
-                    <span className="text-sm text-[#def43840]">Image coming soon</span>
-                  </div>
-                )}
-
-                {/* Prize badge overlay */}
-                <div
-                  className="absolute left-4 top-4 rounded-full px-3 py-1.5 text-[12px] font-bold backdrop-blur-md"
-                  style={{
-                    background: `${ach.color}cc`,
-                    color: '#1c1c1c',
-                  }}
-                >
-                  {ach.prize}
-                </div>
-
-                {/* Type badge */}
-                <div
-                  className="absolute right-4 top-4 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur-md"
-                  style={{
-                    background: 'rgba(28,28,28,0.7)',
-                    color: ach.color,
-                    border: `1px solid ${ach.color}40`,
-                  }}
-                >
-                  {ach.type}
-                </div>
-              </div>
-
-              {/* Info area */}
-              <div className="p-5">
-                <h3 className="text-[clamp(15px,_1vw_+_6px,_20px)] font-bold leading-tight text-[#def438]">
-                  {ach.title}
-                </h3>
-                <div className="mt-3 flex flex-wrap items-center gap-2">
-                  <span
-                    className="rounded-full px-3 py-1 text-[11px] font-medium"
-                    style={{
-                      background: `${ach.color}15`,
-                      border: `1px solid ${ach.color}30`,
-                      color: ach.color,
-                    }}
-                  >
-                    📍 {ach.location}
-                  </span>
-                  <span
-                    className="rounded-full px-3 py-1 text-[11px] font-medium"
-                    style={{
-                      background: `${ach.color}15`,
-                      border: `1px solid ${ach.color}30`,
-                      color: ach.color,
-                    }}
-                  >
-                    📅 {ach.year}
-                  </span>
-                </div>
-              </div>
-            </div>
+          {achievementsData.map((item, index) => (
+            <AchievementSection
+              key={index}
+              item={item}
+              index={index}
+              length={achievementsData.length}
+              color={index % 2 !== 0 ? "Light" : "Dark"}
+            />
           ))}
         </div>
-
-        <Footer className="bottom-0 left-0 mt-12" />
-      </main>
+      </FullpageProviderWork>
     </>
   );
 }
