@@ -92,60 +92,6 @@ export default function EducationLanyard({
   );
 }
 
-function createLabelTexture(title: string, subtitle: string, tone: string) {
-  if (typeof document === "undefined") return null;
-  const canvas = document.createElement("canvas");
-  canvas.width = 1024;
-  canvas.height = 700;
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return null;
-
-  const gradient = ctx.createLinearGradient(0, 0, 1024, 640);
-  if (tone === "front") {
-    gradient.addColorStop(0, "#2a1678");
-    gradient.addColorStop(1, "#5a33f9");
-  } else {
-    gradient.addColorStop(0, "#5a33f9");
-    gradient.addColorStop(1, "#f68ed4");
-  }
-
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.globalAlpha = 0.22;
-  for (let i = 0; i < 12; i += 1) {
-    ctx.beginPath();
-    ctx.fillStyle = i % 2 === 0 ? "#ffffff" : "#120736";
-    ctx.arc(80 + i * 85, 80 + (i % 3) * 110, 42 + (i % 4) * 7, 0, Math.PI * 2);
-    ctx.fill();
-  }
-  ctx.globalAlpha = 1;
-
-  ctx.fillStyle = "#ffffff";
-  ctx.font = "700 78px sans-serif";
-  ctx.fillText(title, 64, 172);
-
-  ctx.fillStyle = "#f5eafe";
-  ctx.font = "500 34px sans-serif";
-  ctx.fillText(subtitle, 64, 230);
-
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
-  ctx.fillRect(64, 288, 270, 270);
-
-  ctx.fillStyle = tone === "front" ? "#5a33f9" : "#7d2cbf";
-  ctx.font = "700 44px sans-serif";
-  ctx.fillText("AM", 155, 440);
-
-  ctx.fillStyle = "#e6d8ff";
-  ctx.font = "500 24px sans-serif";
-  ctx.fillText("Portfolio ID", 64, 606);
-
-  const texture = new THREE.CanvasTexture(canvas);
-  texture.colorSpace = THREE.SRGBColorSpace;
-  texture.anisotropy = 8;
-  return texture;
-}
-
 function createBandTexture() {
   if (typeof document === "undefined") return null;
   const canvas = document.createElement("canvas");
@@ -184,7 +130,6 @@ function createBandTexture() {
   ctx.fillText("AMZ", canvas.width * 0.85, centerY);
 
   // Integrated steel crimp-cover styling at the tie end near the card.
-  // Height spans the full strap so it matches tie width.
   const crimpW = 110;
   const crimpH = canvas.height + 10;
   const crimpX = canvas.width * 0.91 - crimpW / 2;
@@ -214,12 +159,70 @@ function createBandTexture() {
   return texture;
 }
 
+/**
+ * Creates a ShapeGeometry with UV coordinates normalized to [0,1]
+ * so textures fill the entire card face properly.
+ */
+function createCardGeo(cardShape: THREE.Shape) {
+  const geo = new THREE.ShapeGeometry(cardShape);
+  geo.computeBoundingBox();
+  const bb = geo.boundingBox!;
+  const uvAttr = geo.attributes.uv;
+  const posAttr = geo.attributes.position;
+  for (let i = 0; i < uvAttr.count; i++) {
+    const x = posAttr.getX(i);
+    const y = posAttr.getY(i);
+    uvAttr.setXY(
+      i,
+      (x - bb.min.x) / (bb.max.x - bb.min.x),
+      (y - bb.min.y) / (bb.max.y - bb.min.y),
+    );
+  }
+  uvAttr.needsUpdate = true;
+  return geo;
+}
+
+/**
+ * Renders a textured card face with corrected UV mapping.
+ * Uses a ref to attach geometry to avoid re-creating on each render.
+ */
+function CardFace({
+  geometry,
+  texture,
+  position,
+  rotation,
+}: {
+  geometry: THREE.BufferGeometry;
+  texture: THREE.Texture | null;
+  position: [number, number, number];
+  rotation?: [number, number, number];
+}) {
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  useEffect(() => {
+    if (meshRef.current) {
+      meshRef.current.geometry = geometry;
+    }
+  }, [geometry]);
+
+  return (
+    <mesh ref={meshRef} position={position} rotation={rotation}>
+      <meshStandardMaterial
+        map={texture || undefined}
+        metalness={0.12}
+        roughness={0.62}
+        side={THREE.FrontSide}
+        toneMapped={true}
+      />
+    </mesh>
+  );
+}
+
 function useCardTextures(frontImage?: string, backImage?: string) {
-  const [textures, setTextures] = useState(() => {
-    const front = createLabelTexture("ABDUL MUNAF", "Front-End Developer", "front");
-    const back = createLabelTexture("CONTACT", "abdul@example.com", "back");
-    return { front, back };
-  });
+  const [textures, setTextures] = useState<{
+    front: THREE.Texture | null;
+    back: THREE.Texture | null;
+  }>({ front: null, back: null });
 
   useEffect(() => {
     const loader = new THREE.TextureLoader();
@@ -228,6 +231,9 @@ function useCardTextures(frontImage?: string, backImage?: string) {
       if (!texture) return null;
       texture.colorSpace = THREE.SRGBColorSpace;
       texture.anisotropy = 8;
+      texture.minFilter = THREE.LinearFilter;
+      texture.magFilter = THREE.LinearFilter;
+      texture.needsUpdate = true;
       return texture;
     };
 
@@ -238,7 +244,9 @@ function useCardTextures(frontImage?: string, backImage?: string) {
           setTextures((prev) => ({ ...prev, front: withSettings(tex) }));
         },
         undefined,
-        () => {},
+        (err) => {
+          console.error("Failed to load front image:", err);
+        },
       );
     }
 
@@ -249,7 +257,9 @@ function useCardTextures(frontImage?: string, backImage?: string) {
           setTextures((prev) => ({ ...prev, back: withSettings(tex) }));
         },
         undefined,
-        () => {},
+        (err) => {
+          console.error("Failed to load back image:", err);
+        },
       );
     }
   }, [frontImage, backImage]);
@@ -372,6 +382,10 @@ function Band({
 
     return shape;
   }, []);
+
+  // Create separate geometry instances for front and back
+  const frontGeo = useMemo(() => createCardGeo(cardShape), [cardShape]);
+  const backGeo = useMemo(() => createCardGeo(cardShape), [cardShape]);
 
   const cardExtrudeSettings = useMemo(
     () => ({
@@ -502,32 +516,26 @@ function Band({
               drag(false);
             }}
           >
-            <mesh castShadow receiveShadow>
-              <extrudeGeometry args={[cardShape, cardExtrudeSettings]} />
-              <meshPhysicalMaterial
-                color="#fdfbff"
-                roughness={0.7}
-                metalness={0.05}
-                clearcoat={isMobile ? 0 : 1}
-                clearcoatRoughness={0.2}
-              />
-            </mesh>
+            {/* Front face — positioned slightly in front of extrude top */}
+            <CardFace
+              geometry={frontGeo}
+              texture={front}
+              position={[0, 0, 0.042]}
+            />
 
-            <mesh position={[0, 0, 0.025]}>
-              <shapeGeometry args={[cardShape]} />
-              <meshStandardMaterial map={front || undefined} metalness={0.12} roughness={0.62} />
-            </mesh>
-
-            <mesh position={[0, 0, -0.025]} rotation={[0, Math.PI, 0]}>
-              <shapeGeometry args={[cardShape]} />
-              <meshStandardMaterial map={back || undefined} metalness={0.12} roughness={0.62} />
-            </mesh>
-
+            {/* Back face — positioned slightly behind extrude bottom, flipped */}
+            <CardFace
+              geometry={backGeo}
+              texture={back}
+              position={[0, 0, -0.002]}
+              rotation={[0, Math.PI, 0]}
+            />
           </group>
         </RigidBody>
       </group>
 
-      <mesh ref={centerBand}>
+      {/* Band/strap — renderOrder 10 so it draws above the card */}
+      <mesh ref={centerBand} renderOrder={10}>
         <meshLineGeometry />
         <meshLineMaterial
           color="white"
