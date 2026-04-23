@@ -14,14 +14,7 @@ const achievementsData: AchievementData[] = [
   {
     // Light BG (color="Dark") — use blue #4767e8 as secondary accent
     title: "Mealzy — Innovative Food Web Solutions",
-    titleJSX: (
-      <>
-        Mealzy —{" "}
-        <span style={{ color: "#5a33f9" }}>Innovative</span>{" "}
-        Food Web Solutions
-        <span style={{ color: "#4767e8" }}>.</span>
-      </>
-    ),
+
     position: "1st Prize",
     positionRank: 1,
     eventType: "Hackathon",
@@ -31,28 +24,22 @@ const achievementsData: AchievementData[] = [
       "Built Mealzy, an AI-powered food delivery platform that reimagines how people discover and order meals. Won first place among 50+ competing teams.",
     descriptionJSX: (
       <>
-        Built <span style={{ color: "#5a33f9", fontWeight: 700 }}>Mealzy</span>, an{" "}
+        Built <span style={{ color: "#4767e8", fontWeight: 700 }}>Mealzy</span>, an{" "}
         <span style={{ color: "#4767e8", fontWeight: 700 }}>AI-powered</span> food delivery
         platform that reimagines how people discover and order meals. Won{" "}
         <span style={{ fontWeight: 800 }}>first place</span> among 50+ competing teams.
       </>
     ),
     images: [
-      "/img/achievements/ach11.png",
-      "/img/achievements/ach12.png",
-      "/img/achievements/ach13.png",
+      "/achievements/ach11.png",
+      "/achievements/ach12.png",
+      "/achievements/ach13.png",
     ],
   },
   {
     // Dark BG (color="Light") — use pink #f68ed4 as secondary accent
     title: "HACKSTRONAUTS — 24 Hour Challenge",
-    titleJSX: (
-      <>
-        <span style={{ color: "#fcf2ff" }}>HACKSTRONAUTS</span> —{" "}
-        24 Hour <span style={{ color: "#5a33f9" }}>Challenge</span>
-        <span style={{ color: "#f68ed4" }}>.</span>
-      </>
-    ),
+
     position: "1st Place",
     positionRank: 1,
     eventType: "24Hr Challenge",
@@ -65,28 +52,21 @@ const achievementsData: AchievementData[] = [
         Conquered a grueling{" "}
         <span style={{ color: "#f68ed4", fontWeight: 700 }}>24-hour hackathon</span> at{" "}
         <span style={{ fontWeight: 700 }}>SRM University</span>. Delivered a{" "}
-        <span style={{ color: "#5a33f9", fontWeight: 700 }}>full-stack solution</span> under
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>full-stack solution</span> under
         extreme time pressure, securing the{" "}
         <span style={{ fontWeight: 800 }}>top position</span>.
       </>
     ),
     images: [
-      "/img/achievements/ach21.png",
-      "/img/achievements/ach22.png",
-      "/img/achievements/ach23.png",
+      "/achievements/ach21.png",
+      "/achievements/ach22.png",
+      "/achievements/ach23.png",
     ],
   },
   {
     // Light BG — use blue
     title: "New India Vibrant Hackathon",
-    titleJSX: (
-      <>
-        New India{" "}
-        <span style={{ color: "#5a33f9" }}>Vibrant</span>{" "}
-        Hackathon
-        <span style={{ color: "#4767e8" }}>.</span>
-      </>
-    ),
+
     position: "2nd Prize",
     positionRank: 2,
     eventType: "Grand Finale",
@@ -97,29 +77,21 @@ const achievementsData: AchievementData[] = [
     descriptionJSX: (
       <>
         Reached the{" "}
-        <span style={{ color: "#5a33f9", fontWeight: 700 }}>grand finale</span> of a{" "}
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>grand finale</span> of a{" "}
         <span style={{ fontWeight: 700 }}>national-level</span> hackathon and secured{" "}
         <span style={{ fontWeight: 800 }}>second prize</span>. Competed against{" "}
         <span style={{ color: "#4767e8", fontWeight: 700 }}>top teams from across India</span>.
       </>
     ),
     images: [
-      "/img/achievements/ach31.png",
-      "/img/achievements/ach32.png",
-      "/img/achievements/ach33.png",
+      "/achievements/ach31.png",
+      "/achievements/ach32.png",
     ],
   },
   {
     // Dark BG — use pink
     title: "Bureau of Indian Standards",
-    titleJSX: (
-      <>
-        Bureau of{" "}
-        <span style={{ color: "#fcf2ff" }}>Indian</span>{" "}
-        <span style={{ color: "#5a33f9" }}>Standards</span>
-        <span style={{ color: "#f68ed4" }}>.</span>
-      </>
-    ),
+
     position: "3rd Prize",
     positionRank: 3,
     eventType: "Competition",
@@ -132,26 +104,20 @@ const achievementsData: AchievementData[] = [
         Recognized by the{" "}
         <span style={{ color: "#f68ed4", fontWeight: 700 }}>Bureau of Indian Standards</span> for
         excellence in{" "}
-        <span style={{ color: "#5a33f9", fontWeight: 700 }}>technical innovation</span>. Placed{" "}
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>technical innovation</span>. Placed{" "}
         <span style={{ fontWeight: 800 }}>third</span> in a competitive field of participants.
       </>
     ),
     images: [
-      "/img/achievements/ach41.png",
-      "/img/achievements/ach42.png",
-      "/img/achievements/ach43.png",
+      "/achievements/ach41.jpeg",
+      "/achievements/ach42.png",
+      "/achievements/ach43.png",
     ],
   },
   {
     // Light BG — use blue
     title: "Bitathon 2026 — Top 8 Finalist",
-    titleJSX: (
-      <>
-        <span style={{ color: "#5a33f9" }}>Bitathon</span> 2026 —{" "}
-        Top 8 Finalist
-        <span style={{ color: "#4767e8" }}>.</span>
-      </>
-    ),
+
     position: "Top 8 Finalist",
     positionRank: 0,
     eventType: "Analytics",
@@ -163,7 +129,7 @@ const achievementsData: AchievementData[] = [
       <>
         Secured a{" "}
         <span style={{ fontWeight: 800 }}>Top 8 Finalist</span> position at{" "}
-        <span style={{ color: "#5a33f9", fontWeight: 700 }}>Bitathon 2026</span>, hosted by{" "}
+        <span style={{ color: "#4767e8", fontWeight: 700 }}>Bitathon 2026</span>, hosted by{" "}
         <span style={{ color: "#4767e8", fontWeight: 700 }}>Goa Institute of Management</span>. Competing with
         highly talented teams from across{" "}
         <span style={{ fontWeight: 700 }}>India</span> and advancing to the{" "}
@@ -171,9 +137,9 @@ const achievementsData: AchievementData[] = [
       </>
     ),
     images: [
-      "/img/achievements/ach51.png",
-      "/img/achievements/ach52.png",
-      "/img/achievements/ach53.png",
+      "/achievements/ach51.png",
+      "/achievements/ach52.png",
+      "/achievements/ach53.png",
     ],
   },
 ];

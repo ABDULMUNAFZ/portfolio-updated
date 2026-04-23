@@ -9,7 +9,7 @@ type ImageCollageProps = {
 export function ImageCollage({ images, color }: ImageCollageProps) {
   const count = images.length;
   const collageClass =
-    count <= 3 ? "collage-3" : count === 4 ? "collage-4" : "collage-5";
+    count <= 2 ? "collage-2" : count <= 3 ? "collage-3" : count === 4 ? "collage-4" : "collage-5";
 
   // If no images, show placeholder
   if (!images.length || images.every((img) => !img)) {

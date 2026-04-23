@@ -12,7 +12,7 @@ const projectsData = [
     tech: ["React.js", "Node.js", "MongoDB", "NLP"],
     demoLink: "https://full-stack-chatting-website.onrender.com",
     githubLink: "https://full-stack-chatting-website.onrender.com",
-    color: "#5a33f9",
+    color: "#4767e8",
   },
   {
     title: "GreenSight AI",

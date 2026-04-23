@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 
 export type AchievementData = {
   title: string;
-  titleJSX?: React.ReactNode; // Rich colored title
   position: string;
   positionRank: number; // 1,2,3 for podium, 0 for other
   eventType: string;
@@ -57,7 +56,7 @@ export function AchievementSection({
   const rankClass = `rank-${item.positionRank}`;
 
   // Theme-aware colors
-  const accentColor = "#5a33f9";
+  const accentColor = "#4767e8";
   const pinkColor = "#f68ed4";
   const blueColor = "#4767e8";
   const primaryColor = isDarkBg ? "#fcf2ff" : "#1c1c1c";
@@ -127,9 +126,12 @@ export function AchievementSection({
                 }}
               />
 
-              {/* Title — multi-color */}
-              <h2 className="ach-title">
-                {item.titleJSX || item.title}
+              {/* Title — single solid color */}
+              <h2
+                className="ach-title"
+                style={{ color: isDarkBg ? "#def438" : "#4767e8" }}
+              >
+                {item.title}
               </h2>
 
               {/* Position badge */}

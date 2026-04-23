@@ -6,7 +6,7 @@ const skillCategories = [
   {
     title: "Programming",
     skills: ["Python", "HTML5", "CSS3", "JavaScript", "TypeScript", "LaTeX"],
-    color: "#5a33f9",
+    color: "#4767e8",
   },
   {
     title: "Frontend",
@@ -21,7 +21,7 @@ const skillCategories = [
   {
     title: "AI / ML",
     skills: ["YOLO V8", "OpenCV", "PyTorch", "Twilio"],
-    color: "#5a33f9",
+    color: "#4767e8",
   },
   {
     title: "Tools",
@@ -56,7 +56,7 @@ export function SkillsSection() {
             style={{ lineHeight: 1.1 }}
           >
             Technical <span style={{ color: "#fcf2ff" }}>Skills</span>
-            <span style={{ color: "#5a33f9" }}>.</span>
+            <span style={{ color: "#4767e8" }}>.</span>
           </h2>
           <p className="mx-auto mt-2 max-w-[500px] text-center text-[clamp(12px,_1vw_+_8px,_18px)] text-[#def43899]">
             Technologies & tools I work with every day

@@ -16,7 +16,7 @@ export function AboutWrapper({}) {
               className="mb-4 text-center text-[clamp(28px,_5vw,_56px)] font-bold tracking-tight text-colorDark sm:mb-6 lg:mb-10 lg:text-left"
               style={{ lineHeight: 1.1 }}
             >
-              About<span style={{ color: "#5a33f9" }}>.</span>
+              About<span style={{ color: "#4767e8" }}>.</span>
             </h2>
 
             <div

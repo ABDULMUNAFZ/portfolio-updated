@@ -1,54 +1,59 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import "../header.css";
 import { Cursor } from "@/components/cursor";
 import { HeaderNavigation } from "@/components/headerNavigation";
 import { Header } from "@/components/header";
-import { Footer } from "@/components/contactSection/footer";
+import dynamic from "next/dynamic";
+
+// Dynamic import to avoid SSR issues with WebGL
+const InfiniteMenu = dynamic(
+  () => import("@/components/infiniteMenu/InfiniteMenu"),
+  { ssr: false }
+);
 
 const certifications = [
   {
-    issuer: "Google",
-    title: "Google Certification",
-    color: "#5a33f9",
-    image: "", // User will provide
+    image: "/certificates/cert1.png",
+    link: "",
+    title: "Coursera (Google)",
+    description: "Data Analysis Fundamentals",
   },
   {
-    issuer: "Oracle",
-    title: "Oracle Cloud Certification",
-    color: "#f68ed4",
-    image: "", // User will provide
+    image: "/certificates/cert2.png",
+    link: "",
+    title: "Google Digital Garage",
+    description: "SEO, SEM Basics",
   },
   {
-    issuer: "Great Learning",
-    title: "Great Learning Certification",
-    color: "#5a33f9",
-    image: "", // User will provide
+    image: "/certificates/cert3.png",
+    link: "",
+    title: "Altair RapidMiner",
+    description: "Data Processing Workflows",
   },
   {
-    issuer: "Forage",
-    title: "Forage Virtual Experience",
-    color: "#f68ed4",
-    image: "", // User will provide
+    image: "/certificates/cert4.png",
+    link: "",
+    title: "Accenture (Forage)",
+    description: "Data Cleaning, Visualization",
   },
   {
-    issuer: "Git",
-    title: "Git Certification",
-    color: "#5a33f9",
-    image: "", // User will provide
+    image: "/certificates/cert5.png",
+    link: "",
+    title: "OPSWAT Academy",
+    description: "Infrastructure Security Basics",
   },
   {
-    issuer: "OPSWAT",
-    title: "OPSWAT Certification",
-    color: "#f68ed4",
-    image: "", // User will provide
+    image: "/certificates/cert6.png",
+    link: "",
+    title: "IIT Bombay",
+    description: "Python Programming Basics",
   },
   {
-    issuer: "RapidMiner",
-    title: "RapidMiner Certification",
-    color: "#5a33f9",
-    image: "", // User will provide
+    image: "/certificates/cert7.png",
+    link: "",
+    title: "GitKraken",
+    description: "Git Version Control",
   },
 ];
 
@@ -58,75 +63,47 @@ export default function CertificationsPage() {
       <Cursor />
       <Header color="Light" />
       <HeaderNavigation />
-      <main className="darkGradient relative flex min-h-screen w-full flex-col items-start px-paddingX py-paddingY text-[#def438]">
-        <h1 className="mb-2 mt-[0.5em] text-[12.2vw] font-bold leading-[0.9] tracking-tight md:text-[clamp(16px,_6.3vw_+_8px,_120px)]">
-          Certifi<span style={{ color: "#5a33f9" }}>cations</span>
-          <span style={{ color: "#fcf2ff" }}>.</span>
-        </h1>
-        <p className="mb-8 max-w-[600px] text-[clamp(14px,_1vw_+_8px,_20px)] text-[#def438aa] md:mb-12">
-          Professional certifications and courses completed from industry leaders.
-        </p>
 
-        <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
-          {certifications.map((cert, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-3xl transition-all duration-500 hover:scale-[1.03]"
-              style={{
-                background: `rgba(222,244,56,0.03)`,
-                border: `1px solid ${cert.color}25`,
-              }}
-            >
-              {/* Certificate Image area */}
-              <div
-                className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden"
-                style={{
-                  background: `linear-gradient(135deg, ${cert.color}12 0%, ${cert.color}04 100%)`,
-                }}
-              >
-                {cert.image ? (
-                  <Image
-                    src={cert.image}
-                    alt={cert.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex flex-col items-center gap-2 text-center">
-                    <span className="text-4xl opacity-40">📜</span>
-                    <span className="text-[11px] text-[#def43840]">Certificate image</span>
-                  </div>
-                )}
-
-                {/* Issuer badge overlay */}
-                <div
-                  className="absolute left-3 top-3 rounded-full px-3 py-1 text-[11px] font-bold backdrop-blur-md"
-                  style={{
-                    background: `${cert.color}cc`,
-                    color: '#1c1c1c',
-                  }}
-                >
-                  {cert.issuer}
-                </div>
-              </div>
-
-              {/* Info */}
-              <div className="p-4">
-                <h3 className="text-[clamp(13px,_0.8vw_+_5px,_16px)] font-bold text-[#def438]">
-                  {cert.title}
-                </h3>
-                <p
-                  className="mt-1 text-[clamp(11px,_0.6vw_+_4px,_13px)] font-medium"
-                  style={{ color: cert.color }}
-                >
-                  Issued by {cert.issuer}
-                </p>
-              </div>
-            </div>
-          ))}
+      <main
+        className="relative flex h-screen w-full flex-col items-center overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(135deg, #1c1c1c 0%, #2a1f3d 50%, #1c1c1c 100%)",
+        }}
+      >
+        {/* Page Title */}
+        <div className="absolute left-0 right-0 top-0 z-10 flex flex-col items-center pt-[calc(var(--paddingY)_+_0.5rem)]">
+          <h1
+            className="text-center text-[clamp(28px,_5vw,_64px)] font-bold tracking-tight"
+            style={{ color: "#def438", lineHeight: 1.1 }}
+          >
+            Certifications.
+          </h1>
+          <p className="mt-2 max-w-[500px] text-center text-[clamp(12px,_1vw_+_8px,_18px)]" style={{ color: "#4767e8" }}>
+            Professional certifications from industry leaders
+          </p>
         </div>
 
-        <Footer className="bottom-0 left-0 mt-12" />
+        {/* Infinite Menu — full page */}
+        <div className="h-full w-full">
+          <InfiniteMenu items={certifications} scale={1} />
+        </div>
+
+        {/* Subtle top & bottom gradient fades for polish */}
+        <div
+          className="pointer-events-none absolute top-0 left-0 right-0 h-32"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(28,28,28,0.5) 0%, transparent 100%)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute bottom-0 left-0 right-0 h-24"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(28,28,28,0.6) 0%, transparent 100%)",
+          }}
+        />
       </main>
     </>
   );

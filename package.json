@@ -25,6 +25,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "fullpage.js": "^4.0.20",
+    "gl-matrix": "^3.4.4",
     "gsap": "^3.12.4",
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",

@@ -13,7 +13,7 @@ const experiences = [
     description:
       "Working on real-time frontend development using React.js, focusing on responsive UI components and user-centric design patterns.",
     tech: ["React.js", "JavaScript", "CSS3", "Responsive UI"],
-    color: "#5a33f9",
+    color: "#4767e8",
   },
   {
     company: "Cybernault Edutech",
@@ -39,7 +39,7 @@ export function ExperienceSection() {
             className="text-center text-[clamp(28px,_5vw,_64px)] font-bold tracking-tight"
             style={{ lineHeight: 1.1 }}
           >
-            Work <span style={{ color: "#5a33f9" }}>Experience</span>
+            Work <span style={{ color: "#4767e8" }}>Experience</span>
             <span style={{ color: "#f68ed4" }}>.</span>
           </h2>
         </div>

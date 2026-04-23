@@ -61,16 +61,25 @@
   position: absolute;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 16px 40px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s ease;
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
   will-change: transform;
 }
 
 .ach-collage-img:hover {
   z-index: 10 !important;
   transform: scale(1.06) rotate(0deg) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.2),
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .ach-collage-img img {
@@ -78,6 +87,25 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* 2–image layout */
+.collage-2 .ach-collage-img:nth-child(1) {
+  width: 58%;
+  height: 65%;
+  top: 5%;
+  left: 8%;
+  transform: rotate(-3deg);
+  z-index: 3;
+}
+.collage-2 .ach-collage-img:nth-child(2) {
+  width: 55%;
+  height: 60%;
+  bottom: 5%;
+  right: 8%;
+  top: auto;
+  transform: rotate(3deg);
+  z-index: 4;
 }
 
 /* 3–image layout */
