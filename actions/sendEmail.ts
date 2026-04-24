@@ -5,7 +5,7 @@ import { Resend } from "resend";
 import { z } from "zod";
 
 export async function sendEmail(values: TFormSchema) {
-  const resend = new Resend("re_L8AunFxe_AW5vS1eBxxpu3E22H1NrPouQ");
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { data, error } = await resend.emails.send({
     from: `${values.name} <onboarding@resend.dev>`,
     to: ["z.abdulmunaf@gmail.com"],

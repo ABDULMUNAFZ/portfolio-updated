@@ -15,7 +15,7 @@ const projectsData = [
       </>
     ),
     description: "Freelance Website",
-    link: "#",
+    link: "https://unfilteredhealing.in/",
     imageLink: "/img/projects/1.avif",
   },
   {
@@ -25,37 +25,37 @@ const projectsData = [
       </>
     ),
     description: "Freelance Website",
-    link: "#",
+    link: "https://nationalbakeryooty.netlify.app/",
     imageLink: "/img/projects/2.avif",
   },
   {
     title: (
       <>
-        Smart India <br />Hackathon (SIH)
+        Oil & Gas <br />Trading House
       </>
     ),
-    description: "Hackathon Project",
-    link: "#",
+    description: "Freelance Website",
+    link: "https://arabianposition.com/",
     imageLink: "/img/projects/3.avif",
   },
   {
     title: (
       <>
-        Transport & <br />Logistics App
+        Mindloop
       </>
     ),
-    description: "Hackathon Project",
-    link: "#",
+    description: "Website",
+    link: "https://mindloopsite.netlify.app/",
     imageLink: "/img/projects/4.avif",
   },
   {
     title: (
       <>
-        Reinforcement <br />Learning Game
+        Prisma Vision
       </>
     ),
-    description: "Hackathon Project",
-    link: "#",
+    description: "Website",
+    link: "https://visionsite.netlify.app/",
     imageLink: "/img/projects/5.avif",
   },
 ];
